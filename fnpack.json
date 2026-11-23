@@ -29,7 +29,7 @@
       "service_port": "8097",
       "releases": {
         "1.6.3": {
-          "changelog": "修复 SSH 非22端口误报；修复飞牛App内置浏览器访问被拒；被拒时显示Host/Origin供排障，诊断包增加UA与请求头记录。",
+          "changelog": "本版修复",
           "updated_at": "2026-11-23T11:11:04Z",
           "packages": {
             "arm": {
@@ -40,7 +40,7 @@
           }
         },
         "1.6.2": {
-          "changelog": "修复空间构成条显示与6个其他bug（诊断假成功、并发丢记录、状态污染、文案等）。",
+          "changelog": "本版修复",
           "updated_at": "2026-11-21T11:26:55Z",
           "packages": {
             "arm": {
@@ -74,13 +74,24 @@
       "service_port": "8090",
       "releases": {
         "1.2.8": {
-          "changelog": "node 运行时版，功能完整。四档频率切换、自愈回滚、烧机曲线。",
+          "changelog": "一键超频 (OneKey-OC) v1.2.8 发布说明",
           "updated_at": "2026-09-29T12:39:59Z",
           "packages": {
             "arm": {
               "download_url": "https://github.com/gulugulupao/onekey-overclock/releases/download/v1.2.8/OneKey-OC-v1.2.8-node.fpk",
               "sha256": "ff49864a727e43ba48d7e480e187e1d3cd6c6eeb07c039cd8ac00fd462613c91",
               "size": 43384478
+            }
+          }
+        },
+        "1.2.0": {
+          "changelog": "v1.2.0 · DTB 动态适配（正式版）",
+          "updated_at": "2026-09-21T12:49:49Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/onekey-overclock/releases/download/v1.2.0/OneKey-OC-v1.2.0-node.fpk",
+              "sha256": "5c35ad2f0c38626a941ba1c507cdc2c8497738f752a83e16ef42ba5748ea96ab",
+              "size": 51296086
             }
           }
         }
@@ -108,7 +119,7 @@
       "service_port": "8091",
       "releases": {
         "0.1.9": {
-          "changelog": "综合磁盘健康检测。",
+          "changelog": "v0.1.9",
           "updated_at": "2026-09-27T12:26:18Z",
           "packages": {
             "arm": {
@@ -119,7 +130,7 @@
           }
         },
         "0.1.4": {
-          "changelog": "磁盘健康检测早期版本。",
+          "changelog": "v0.1.4",
           "updated_at": "2026-09-20T03:58:50Z",
           "packages": {
             "arm": {
@@ -153,7 +164,7 @@
       "service_port": "8765",
       "releases": {
         "1.0.0": {
-          "changelog": "极测性能跑分首发版。",
+          "changelog": "fnOS ARM 设备本机**离线**综合跑分：零 Docker、纯 Python + 本地 C 基准、常驻约 16MB",
           "updated_at": "2026-09-19T08:50:30Z",
           "packages": {
             "arm": {
@@ -187,7 +198,7 @@
       "service_port": "8080",
       "releases": {
         "1.5": {
-          "changelog": "病毒库就绪判定兼容 daily.cld；前端交互增强。",
+          "changelog": "ClamSentinel V1.5 发布说明",
           "updated_at": "2026-09-08T11:17:46Z",
           "packages": {
             "arm": {
