@@ -1,0 +1,60 @@
+name: 自动同步应用索引
+
+# 发版后自动更新索引：中央轮询各应用仓库的 GitHub Release，发现新版本就
+# 更新 moo.json / fnpack.json 并提交。用本仓库 GITHUB_TOKEN，无需 PAT。
+# 轮询有延迟（GitHub 的 schedule 在高峰期可能再延迟几分钟），追求实时的
+# 话可在各应用仓库手动触发本工作流（workflow_dispatch）。
+
+on:
+  schedule:
+    # 每 30 分钟（避开整点，减少 GitHub 高峰期延迟）
+    - cron: '23,53 * * * *'
+  workflow_dispatch:
+    inputs:
+      note:
+        description: '手动触发备注（可选）'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-index
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出本仓库
+        uses: actions/checkout@v4
+
+      - name: 同步索引
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          python3 tools/sync_index.py
+          if git diff --quiet -- moo.json fnpack.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "索引已是最新，无需提交。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "检测到索引变更："
+            git diff --stat -- moo.json fnpack.json
+          fi
+
+      - name: 提交索引变更
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add moo.json fnpack.json
+          git commit -m "chore: 自动同步应用索引 ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+          git push
+          echo "索引已推送。"
