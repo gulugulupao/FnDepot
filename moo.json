@@ -1,0 +1,218 @@
+{
+  "schema_version": "moo",
+  "source_info": {
+    "name": "很多问题的小明同学 · ARM 飞牛应用源",
+    "author": "很多问题的小明同学",
+    "homepage": "https://github.com/gulugulupao",
+    "description": "ARM 版飞牛 fnOS 第三方应用合集：系统盘清理、一键超频、磁盘检测、性能跑分、哨兵杀毒。"
+  },
+  "apps": {
+    "fncleankernel": {
+      "display_name": "系统盘清理助手",
+      "desc": "通用 ARM 飞牛系统盘体检与逐项清理工具，给板载 EMMC 腾空间。体检先行、逐项勾选、只清系统盘不碰数据卷，历史可查；涉及内核变更时强制刷新引导，只清缓存时跳过。",
+      "version": "1.6.3",
+      "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.3/fncleankernel-V1.6.3.fpk",
+      "sha256": "90176cf59f12f28b06adc2d67a00e44078bd36e5beab59feeef0703972b44822",
+      "size": 0.16,
+      "size_bytes": 166664,
+      "platform": "arm",
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "icons/fncleankernel.png",
+      "readme_url": "https://github.com/gulugulupao/fncleankernel/blob/main/README.md",
+      "bug_report_url": "https://github.com/gulugulupao/fncleankernel/issues",
+      "homepage": "https://github.com/gulugulupao/fncleankernel",
+      "maintainer": "很多问题的小明同学",
+      "license": "MIT",
+      "install_type": "root",
+      "app_type": "fpk",
+      "service_port": "8097",
+      "updated_at": "2026-11-23T11:11:04Z",
+      "changelog": "修复 SSH 非22端口误报；修复飞牛App内置浏览器访问被拒；被拒时显示Host/Origin供排障，诊断包增加UA与请求头记录。",
+      "releases": {
+        "1.6.3": {
+          "changelog": "修复 SSH 非22端口误报；修复飞牛App内置浏览器访问被拒；被拒时显示Host/Origin供排障，诊断包增加UA与请求头记录。",
+          "updated_at": "2026-11-23T11:11:04Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.3/fncleankernel-V1.6.3.fpk",
+              "sha256": "90176cf59f12f28b06adc2d67a00e44078bd36e5beab59feeef0703972b44822",
+              "size": 166664
+            }
+          }
+        },
+        "1.6.2": {
+          "changelog": "修复空间构成条显示与6个其他bug（诊断假成功、并发丢记录、状态污染、文案等）。",
+          "updated_at": "2026-11-21T11:26:55Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.2/fncleankernel-V1.6.2.fpk",
+              "sha256": "c50fda1acc101bb76d45efa88065a9c40601e7b7e92753257d3b5d7cf6f8cdc0",
+              "size": 168724
+            }
+          }
+        }
+      }
+    },
+    "onekey-overclock": {
+      "display_name": "一键超频",
+      "desc": "ARM 飞牛设备不重编译内核即可一键超频。A73大核四档频率切换、实时频率/电压/温度显示、烧机曲线验证、异常重启自愈回滚、一键恢复出厂频率。注意供电与散热，焚天档仅适用自改散热机箱。",
+      "version": "1.2.8",
+      "download_url": "https://github.com/gulugulupao/onekey-overclock/releases/download/v1.2.8/OneKey-OC-v1.2.8-node.fpk",
+      "sha256": "ff49864a727e43ba48d7e480e187e1d3cd6c6eeb07c039cd8ac00fd462613c91",
+      "size": 41.37,
+      "size_bytes": 43384478,
+      "platform": "arm",
+      "categories": [
+        "硬件驱动"
+      ],
+      "icon_url": "icons/onekey-overclock.png",
+      "readme_url": "https://github.com/gulugulupao/onekey-overclock/blob/main/README.md",
+      "bug_report_url": "https://github.com/gulugulupao/onekey-overclock/issues",
+      "homepage": "https://github.com/gulugulupao/onekey-overclock",
+      "maintainer": "很多问题的小明同学",
+      "license": "MIT",
+      "install_type": "root",
+      "app_type": "fpk",
+      "service_port": "8090",
+      "updated_at": "2026-09-29T12:39:59Z",
+      "changelog": "node 运行时版，功能完整。四档频率切换、自愈回滚、烧机曲线。",
+      "releases": {
+        "1.2.8": {
+          "changelog": "node 运行时版，功能完整。四档频率切换、自愈回滚、烧机曲线。",
+          "updated_at": "2026-09-29T12:39:59Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/onekey-overclock/releases/download/v1.2.8/OneKey-OC-v1.2.8-node.fpk",
+              "sha256": "ff49864a727e43ba48d7e480e187e1d3cd6c6eeb07c039cd8ac00fd462613c91",
+              "size": 43384478
+            }
+          }
+        }
+      }
+    },
+    "com.gulugulupao.smartdisk": {
+      "display_name": "综合磁盘检测",
+      "desc": "离线综合评估板载 eMMC、NVMe、SATA、USB 桥接硬盘的 SMART 健康信息，一键给出磁盘健康分、剩余写入寿命与使用年限；内置定时扫描、历史趋势曲线与退化告警。",
+      "version": "0.1.9",
+      "download_url": "https://github.com/gulugulupao/fnsmartdisk/releases/download/v0.1.9/FnSmartdisk.fpk",
+      "sha256": "3a7b2fa9e29396cb0fa1b3ea9cab65de41059fb68410e2c04f1e76b6fd2da36f",
+      "size": 0.63,
+      "size_bytes": 665144,
+      "platform": "arm",
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "icons/fnsmartdisk.png",
+      "readme_url": "https://github.com/gulugulupao/fnsmartdisk/blob/main/README.md",
+      "bug_report_url": "https://github.com/gulugulupao/fnsmartdisk/issues",
+      "homepage": "https://github.com/gulugulupao/fnsmartdisk",
+      "maintainer": "很多问题的小明同学",
+      "license": "MIT",
+      "install_type": "root",
+      "app_type": "fpk",
+      "service_port": "8091",
+      "updated_at": "2026-09-27T12:26:18Z",
+      "changelog": "综合磁盘健康检测。",
+      "releases": {
+        "0.1.9": {
+          "changelog": "综合磁盘健康检测。",
+          "updated_at": "2026-09-27T12:26:18Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fnsmartdisk/releases/download/v0.1.9/FnSmartdisk.fpk",
+              "sha256": "3a7b2fa9e29396cb0fa1b3ea9cab65de41059fb68410e2c04f1e76b6fd2da36f",
+              "size": 665144
+            }
+          }
+        },
+        "0.1.4": {
+          "changelog": "磁盘健康检测早期版本。",
+          "updated_at": "2026-09-20T03:58:50Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fnsmartdisk/releases/download/v0.1.4/FnSmartdisk.fpk",
+              "sha256": "8cef77c825befc8fcaa7eb83250b6043a1362a231c6973f60732c654a08fc0c7",
+              "size": 296624
+            }
+          }
+        }
+      }
+    },
+    "chipbeat": {
+      "display_name": "极测-性能跑分",
+      "desc": "ARM NAS/软路由本机综合跑分：CPU整数/浮点/多核、GPU OpenCL GFLOPS、内存STREAM带宽、磁盘顺序读写、NPU RKNN推理。强制能力检测门控，动态仪表可视化与跨系列SoC对比，零Docker。",
+      "version": "1.0.0",
+      "download_url": "https://github.com/gulugulupao/chipbeat/releases/download/v1.0.0/chipbeat.fpk",
+      "sha256": "0754eedc25dc390152017eaa2e3ee11403234e691d0358f8ce070f906df92c9f",
+      "size": 0.09,
+      "size_bytes": 93201,
+      "platform": "arm",
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "icons/chipbeat.png",
+      "readme_url": "https://github.com/gulugulupao/chipbeat/blob/main/README.md",
+      "bug_report_url": "https://github.com/gulugulupao/chipbeat/issues",
+      "homepage": "https://github.com/gulugulupao/chipbeat",
+      "maintainer": "很多问题的小明同学",
+      "license": "MIT",
+      "install_type": "root",
+      "app_type": "fpk",
+      "service_port": "8765",
+      "updated_at": "2026-09-19T08:50:30Z",
+      "changelog": "极测性能跑分首发版。",
+      "releases": {
+        "1.0.0": {
+          "changelog": "极测性能跑分首发版。",
+          "updated_at": "2026-09-19T08:50:30Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/chipbeat/releases/download/v1.0.0/chipbeat.fpk",
+              "sha256": "0754eedc25dc390152017eaa2e3ee11403234e691d0358f8ce070f906df92c9f",
+              "size": 93201
+            }
+          }
+        }
+      }
+    },
+    "clamsentinel": {
+      "display_name": "ClamSentinel 哨兵杀毒",
+      "desc": "ARM 飞牛 OS 原生轻量杀毒方案，免 Docker。复用 ClamAV 病毒库；智能睡眠空闲时释放约1GB内存、随叫随醒；实测适配 RK35XX 与晶晨设备，2GB小运存专项调优；节能/均衡双档、诊断日志导出。",
+      "version": "1.5",
+      "download_url": "https://github.com/gulugulupao/clamsentinel/releases/download/v1.5/clamsentinel-v1.5.fpk",
+      "sha256": "e6c5e6d89c7d1874040d8991bdbe2bd959b82c4feccfdb214270778573325c08",
+      "size": 57.46,
+      "size_bytes": 60247748,
+      "platform": "arm",
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "icons/clamsentinel.png",
+      "readme_url": "https://github.com/gulugulupao/clamsentinel/blob/main/README.md",
+      "bug_report_url": "https://github.com/gulugulupao/clamsentinel/issues",
+      "homepage": "https://github.com/gulugulupao/clamsentinel",
+      "maintainer": "很多问题的小明同学",
+      "license": "MIT",
+      "install_type": "root",
+      "app_type": "fpk",
+      "service_port": "8080",
+      "updated_at": "2026-09-08T11:17:46Z",
+      "changelog": "病毒库就绪判定兼容 daily.cld；前端交互增强。",
+      "releases": {
+        "1.5": {
+          "changelog": "病毒库就绪判定兼容 daily.cld；前端交互增强。",
+          "updated_at": "2026-09-08T11:17:46Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/clamsentinel/releases/download/v1.5/clamsentinel-v1.5.fpk",
+              "sha256": "e6c5e6d89c7d1874040d8991bdbe2bd959b82c4feccfdb214270778573325c08",
+              "size": 60247748
+            }
+          }
+        }
+      }
+    }
+  }
+}
