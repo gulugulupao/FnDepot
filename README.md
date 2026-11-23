@@ -32,14 +32,19 @@ https://github.com/gulugulupao/FnDepot
 
 两个索引的 `apps` 键 = 各 FPK 内 `manifest` 的 `appname`，下载链接指向各项目 GitHub Release，带 sha256 校验。
 
-## 更新机制
+## 更新机制（全自动，无需手动维护）
 
-每个应用发版后，更新对应索引的 `releases` 节点（download_url + sha256 + size + changelog），并同步顶层版本号。索引只保留最近版本，避免历史包链接失效。
+本仓库的 GitHub Actions（`.github/workflows/sync-index.yml`）**每 30 分钟自动轮询**各应用仓库的 Release，发现新版本即更新 `moo.json` / `fnpack.json` 并提交。**各应用发完 Release 不用手动改索引**，最多等一个轮询周期。
+
+- 想立即更新：到本仓库 Actions 页手动运行「自动同步应用索引」（workflow_dispatch）。
+- 自动同步脚本 `tools/sync_index.py` 直接读 GitHub Release 自带的 sha256 与 size，无需下载安装包；只保留最近 2 版，同版本换包会拒绝（防校验和失配）。
+
+新增应用时才需要手动：改 `tools/sync_index.py` 顶部 `APPS` 映射、放图标到 `icons/`、在两个索引 `apps` 里加节点。详见 `tools/更新索引说明.md`。
 
 校验命令（可选）：
 
 ```bash
-python3 -c "import json; [json.load(open(f)) for f in ('fnpack.json','moo.json')]; print('OK')"
+python3 tools/sync_index.py --check   # 退出0=已最新，退出1=需要更新
 ```
 
 ## 免责声明
