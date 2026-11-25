@@ -28,6 +28,17 @@
       "is_docker": false,
       "service_port": "8097",
       "releases": {
+        "1.7.1": {
+          "changelog": "本版：修复安卓飞牛 App 内置浏览器的下载问题",
+          "updated_at": "2026-11-25T14:46:34Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.1/fncleankernel-V1.7.1.fpk",
+              "sha256": "f20f8717ad70d862adbcdd71b2eba6c13de7ba88d141bf1abf6597a0a3e9eaea",
+              "size": 174420
+            }
+          }
+        },
         "1.7.0": {
           "changelog": "本版：诊断包更全，交互更干净",
           "updated_at": "2026-11-25T13:46:37Z",
@@ -36,17 +47,6 @@
               "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.0/fncleankernel-V1.7.0.fpk",
               "sha256": "43c600f97cd8d4dca0995fd49b17e5cfcd188d2b4264b28dca9b88641525689c",
               "size": 171840
-            }
-          }
-        },
-        "1.6.4": {
-          "changelog": "本版：诊断包大幅扩充",
-          "updated_at": "2026-11-25T12:26:01Z",
-          "packages": {
-            "arm": {
-              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.4/fncleankernel-V1.6.4.fpk",
-              "sha256": "9bfba1561d776af4093c54d7cc723bdbbddcaa68415ed8c0f257ca14e6bc9841",
-              "size": 168766
             }
           }
         }
