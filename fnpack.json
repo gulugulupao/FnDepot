@@ -28,6 +28,17 @@
       "is_docker": false,
       "service_port": "8097",
       "releases": {
+        "1.6.4": {
+          "changelog": "本版：诊断包大幅扩充",
+          "updated_at": "2026-11-25T12:26:01Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.4/fncleankernel-V1.6.4.fpk",
+              "sha256": "9bfba1561d776af4093c54d7cc723bdbbddcaa68415ed8c0f257ca14e6bc9841",
+              "size": 168766
+            }
+          }
+        },
         "1.6.3": {
           "changelog": "本版修复",
           "updated_at": "2026-11-23T11:11:04Z",
@@ -36,17 +47,6 @@
               "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.3/fncleankernel-V1.6.3.fpk",
               "sha256": "90176cf59f12f28b06adc2d67a00e44078bd36e5beab59feeef0703972b44822",
               "size": 166664
-            }
-          }
-        },
-        "1.6.2": {
-          "changelog": "本版修复",
-          "updated_at": "2026-11-21T11:26:55Z",
-          "packages": {
-            "arm": {
-              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.6.2/fncleankernel-V1.6.2.fpk",
-              "sha256": "c50fda1acc101bb76d45efa88065a9c40601e7b7e92753257d3b5d7cf6f8cdc0",
-              "size": 168724
             }
           }
         }
