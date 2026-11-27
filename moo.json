@@ -10,11 +10,11 @@
     "fncleankernel": {
       "display_name": "系统盘清理助手",
       "desc": "通用 ARM 飞牛系统盘体检与逐项清理工具，给板载 EMMC 腾空间。体检先行、逐项勾选、只清系统盘不碰数据卷，历史可查；涉及内核变更时强制刷新引导，只清缓存时跳过。",
-      "version": "1.7.1",
-      "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.1/fncleankernel-V1.7.1.fpk",
-      "sha256": "f20f8717ad70d862adbcdd71b2eba6c13de7ba88d141bf1abf6597a0a3e9eaea",
+      "version": "1.7.2",
+      "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.2/fncleankernel-V1.7.2.fpk",
+      "sha256": "3c3514f899167e85de7fff42ea757f67271585f79c0bf4545b7d679f4b938434",
       "size": 0.17,
-      "size_bytes": 174420,
+      "size_bytes": 177134,
       "platform": "arm",
       "categories": [
         "系统工具"
@@ -28,9 +28,20 @@
       "install_type": "root",
       "app_type": "fpk",
       "service_port": "8097",
-      "updated_at": "2026-11-25T14:46:34Z",
-      "changelog": "本版：修复安卓飞牛 App 内置浏览器的下载问题",
+      "updated_at": "2026-11-27T09:07:50Z",
+      "changelog": "本版：办公平台反代 / 自建 DDNS 不再被拒",
       "releases": {
+        "1.7.2": {
+          "changelog": "本版：办公平台反代 / 自建 DDNS 不再被拒",
+          "updated_at": "2026-11-27T09:07:50Z",
+          "packages": {
+            "arm": {
+              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.2/fncleankernel-V1.7.2.fpk",
+              "sha256": "3c3514f899167e85de7fff42ea757f67271585f79c0bf4545b7d679f4b938434",
+              "size": 177134
+            }
+          }
+        },
         "1.7.1": {
           "changelog": "本版：修复安卓飞牛 App 内置浏览器的下载问题",
           "updated_at": "2026-11-25T14:46:34Z",
@@ -39,17 +50,6 @@
               "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.1/fncleankernel-V1.7.1.fpk",
               "sha256": "f20f8717ad70d862adbcdd71b2eba6c13de7ba88d141bf1abf6597a0a3e9eaea",
               "size": 174420
-            }
-          }
-        },
-        "1.7.0": {
-          "changelog": "本版：诊断包更全，交互更干净",
-          "updated_at": "2026-11-25T13:46:37Z",
-          "packages": {
-            "arm": {
-              "download_url": "https://github.com/gulugulupao/fncleankernel/releases/download/v1.7.0/fncleankernel-V1.7.0.fpk",
-              "sha256": "43c600f97cd8d4dca0995fd49b17e5cfcd188d2b4264b28dca9b88641525689c",
-              "size": 171840
             }
           }
         }
